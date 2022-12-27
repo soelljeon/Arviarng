@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- <link rel="stylesheet" href="./css/sub.css" /> -->
+    <link rel="stylesheet" href="./css/arviang.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="arviang.js" defer></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".list_btn").mouseenter(function (e) {
+          e.preventDefault;
+          let num = $(this).index();
+          console.log(num);
+          $(".content_con>li").removeClass("on");
+          $(".content_con>li").eq(num).addClass("on");
+        });
+        $(".right_tab .item").click(function (e) {
+          // a태그를 무력화 시킴 -> a태그는 초기화시키는 속성이기때문에
+          // 보통 페이지 전환이 아닌이상 a태그가 아닌 button을 작성
+          e.preventDefault;
+          var tab_id = $(this).attr("data-tab");
+
+          $(".right_tab .item").removeClass("on");
+          $(".tab-content").removeClass("on");
+
+          $(this).addClass("on");
+          $("#" + tab_id).addClass("on");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="m_wrap">
+      <div class="cousor"></div>
+      <!-- fixed menu -->
+      <div class="cookie">
+        <strong>Diese Website verwendet Cookies. <a href="#"> More </a></strong>
+      </div>
+      <div class="flot_menu">
+        <a href="#"><i class="fa-solid fa-angles-up"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-solid fa-angles-down"></i></a>
+      </div>
+      <header class="hd">
+        <div class="swiper top_banner03">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="#"></a>
+              <p>
+                Delays in online orders may occur due to increased safety
+                measures and order volume.
+              </p>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"></a>
+              <p>
+                Don’t wait until the last minute! Order by these dates for
+                holiday delivery (more info here).
+              </p>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"></a>
+              <p>Get 10% OFF Only Arviang Members.</p>
+            </li>
+          </ul>
+        </div>
+        <!-- gnb start -->
+        <nav class="hd_inner">
+          <a href="index.html" class="logo"
+            ><img src="./arviang.img/LOGO.png" alt=""
+          /></a>
+          <form action="/search.html" method="get" class="search_box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              class="search"
+              type="text"
+              placeholder="          Search for products, scents, sample"
+            />
+          </form>
+          <div class="inner_wrap">
+            <ul class="gnb">
+              <li>
+                <a href="./sub.html">New & Trending</a>
+                <ul class="sub">
+                  <li><a href="#">sub_menu1</a></li>
+                  <li><a href="#">sub_menu2</a></li>
+                  <li><a href="#">sub_menu3</a></li>
+                  <li><a href="#">sub_menu4</a></li>
+                  <div class="sub_img">
+                    <a href="#"
+                      ><img src="./arviang.img/hd_test01.jpg" alt=""
+                    /></a>
+                  </div>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Best Sellers</a>
+                <ul class="sub">
+                  <li><a href="#">sub_menu1</a></li>
+                  <li><a href="#">sub_menu2</a></li>
+                  <li><a href="#">sub_menu3</a></li>
+                  <li><a href="#">sub_menu4</a></li>
+                  <div class="sub_img">
+                    <a href="#"
+                      ><img src="./arviang.img/hd_test02.jpg" alt=""
+                    /></a>
+                  </div>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Bath</a>
+                <ul class="sub">
+                  <li><a href="#">sub_menu1</a></li>
+                  <li><a href="#">sub_menu2</a></li>
+                  <li><a href="#">sub_menu3</a></li>
+                  <li><a href="#">sub_menu4</a></li>
+                  <div class="sub_img">
+                    <a href="#"
+                      ><img src="./arviang.img/hd_test03.jpg" alt=""
+                    /></a>
+                  </div>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Discovery</a>
+                <ul class="sub">
+                  <li><a href="#">sub_menu1</a></li>
+                  <li><a href="#">sub_menu2</a></li>
+                  <li><a href="#">sub_menu3</a></li>
+                  <li><a href="#">sub_menu4</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Gift</a>
+                <ul class="sub">
+                  <li><a href="#">sub_menu1</a></li>
+                  <li><a href="#">sub_menu2</a></li>
+                  <li><a href="#">sub_menu3</a></li>
+                  <li><a href="#">sub_menu4</a></li>
+                  <div class="sub_img">
+                    <a href="#"
+                      ><img src="./arviang.img/hd_test04.jpg" alt=""
+                    /></a>
+                  </div>
+                </ul>
+              </li>
+              <li>
+                <a href="#">About us</a>
+                <ul class="sub">
+                  <li><a href="#">sub_menu1</a></li>
+                  <li><a href="#">sub_menu2</a></li>
+                  <li><a href="#">sub_menu3</a></li>
+                  <li><a href="#">sub_menu4</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="right_menu">
+            <div class="icons">
+              <a href="#"><i class="fa-solid fa-circle-question"></i></a>
+              <a href="#"><i class="fa-solid fa-user"></i></a>
+              <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+            <div class="lang">
+              <span>Korean</span>
+              <ul class="dropdown">
+                <li><a href="#">English</a></li>
+                <li><a href="#">Chinese</a></li>
+              </ul>
+            </div>
+          </div>
+          <a href="#"><i class="fa-solid fa-bars ham"></i></a>
+        </nav>
+      </header>
+      <!-- sec1 start -->
+      <section class="sec1">
+        <h1 hidden>main_bannerlist</h1>
+        <ul class="btn_con">
+          <li class="list_btn">
+            <h2>HOLIDAY COLLECTION</h2>
+            <p>건강한 환경에서 아름다움을 찾고,</p>
+            <p>안전한 천연원료를 지향하는 브랜드</p>
+            <a class="link">
+              <span href="#">Learn More</span>
+            </a>
+          </li>
+          <li class="list_btn">
+            <h2>HOLIDAY COLLECTION</h2>
+            <p>건강한 환경에서 아름다움을 찾고,</p>
+            <p>안전한 천연원료를 지향하는 브랜드</p>
+            <a class="link">
+              <span href="#">Learn More</span>
+            </a>
+          </li>
+          <li class="list_btn">
+            <h2>HOLIDAY COLLECTION</h2>
+            <p>건강한 환경에서 아름다움을 찾고,</p>
+            <p>안전한 천연원료를 지향하는 브랜드</p>
+            <a class="link">
+              <span href="#">Learn More</span>
+            </a>
+          </li>
+          <li class="list_btn">
+            <h2>HOLIDAY COLLECTION</h2>
+            <p>건강한 환경에서 아름다움을 찾고,</p>
+            <p>안전한 천연원료를 지향하는 브랜드</p>
+            <a class="link">
+              <span href="#">Learn More</span>
+            </a>
+          </li>
+        </ul>
+        <div class="pgm_sec1">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+        </div>
+        <ul class="content_con">
+          <li class="con_list on">
+            <!-- vedio  -->
+            <video
+              controls
+              poster="./arviang.img/sec1_2.jpg"
+              loop
+              preload="auto"
+              autoplay
+              muted
+            >
+              <source src="./arviang.img/sec1_01.mp4" type="video/mp4" />
+            </video>
+          </li>
+          <li class="con_list">
+            <img src="./arviang.img/sec1_04.jpg" alt="" />
+          </li>
+          <li class="con_list">
+            <video
+              controls
+              poster="./arviang.img/sec1_2.jpg"
+              loop
+              preload="auto"
+              autoplay
+              muted
+            >
+              <source src="./arviang.img/sec1_02.mp4" type="video/mp4" />
+            </video>
+          </li>
+          <li class="con_list">
+            <img src="./arviang.img/sec1_03.jpg" alt="" />
+          </li>
+        </ul>
+      </section>
+      <!-- sec2 start -->
+      <section class="sec2">
+        <h1 hidden>event_banner</h1>
+        <div class="swiper sec2_event">
+          <div class="swiper-wrapper">
+            <p class="swiper-slide">Event banner</p>
+            <p class="swiper-slide">Event banner</p>
+            <p class="swiper-slide">Event banner</p>
+            <p class="swiper-slide">Event banner</p>
+            <p class="swiper-slide">Event banner</p>
+            <p class="swiper-slide">Event banner</p>
+          </div>
+        </div>
+        <!-- slide  -->
+        <div class="wrap">
+          <div class="swiper event_con">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="txt_con">
+                  <h2><span>Arviang Event01</span></h2>
+                  <p>체험단 모집 이벤트</p>
+                  <p>
+                    색다른 추억을 만들고 싶을 때, 연인과 더욱 로맨틱한 여행을
+                    떠나고 싶을 때 아르비앙 입욕제를 사용해보시길 바랍니다.
+                  </p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="txt_con">
+                  <h2>Arviang Event02</h2>
+                  <p>체험단 모집 이벤트</p>
+                  <p>
+                    색다른 추억을 만들고 싶을 때, 연인과 더욱 로맨틱한 여행을
+                    떠나고 싶을 때 아르비앙 입욕제를 사용해보시길 바랍니다.
+                  </p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="txt_con">
+                  <h2>Arviang Event03</h2>
+                  <p>체험단 모집 이벤트</p>
+                  <p>
+                    색다른 추억을 만들고 싶을 때, 연인과 더욱 로맨틱한 여행을
+                    떠나고 싶을 때 아르비앙 입욕제를 사용해보시길 바랍니다.
+                  </p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="txt_con">
+                  <h2><span>Arviang Event04</span></h2>
+                  <p>체험단 모집 이벤트</p>
+                  <p>
+                    색다른 추억을 만들고 싶을 때, 연인과 더욱 로맨틱한 여행을
+                    떠나고 싶을 때 아르비앙 입욕제를 사용해보시길 바랍니다.
+                  </p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="txt_con">
+                  <h2>Arviang Event05</h2>
+                  <p>체험단 모집 이벤트</p>
+                  <p>
+                    색다른 추억을 만들고 싶을 때, 연인과 더욱 로맨틱한 여행을
+                    떠나고 싶을 때 아르비앙 입욕제를 사용해보시길 바랍니다.
+                  </p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="txt_con">
+                  <h2>Arviang Event06</h2>
+                  <p>체험단 모집 이벤트</p>
+                  <p>
+                    색다른 추억을 만들고 싶을 때, 연인과 더욱 로맨틱한 여행을
+                    떠나고 싶을 때 아르비앙 입욕제를 사용해보시길 바랍니다.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper event_con2">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="img_con">
+                  <img src="./arviang.img/20211008122126L.jpg" alt="" />
+                  <a href="#" class="link"></a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="img_con">
+                  <img src="./arviang.img/sec2_event02.jpg" alt="" />
+                  <a href="#" class="link"></a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="img_con">
+                  <img src="./arviang.img/sec2_event03.jpg" alt="" />
+                  <a href="#" class="link"></a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="img_con">
+                  <img src="./arviang.img/20211008122126L.jpg" alt="" />
+                  <a href="#" class="link"></a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="img_con">
+                  <img src="./arviang.img/sec2_event02.jpg" alt="" />
+                  <a href="#" class="link"></a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="img_con">
+                  <img src="./arviang.img/sec2_event03.jpg" alt="" />
+                  <a href="#" class="link"></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-button-next next1"></div>
+          <div class="swiper-button-prev prev1"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </section>
+      <!-- sec3 start -->
+      <section class="sec3">
+        <h1>Best Saller</h1>
+        <div class="sec3_con">
+          <ul class="right_tab">
+            <li class="item on" data-tab="tab-1">
+              <!-- a태그 사용x -> img에만 적용 -->
+              <a href="javascript:void(0)">
+                <p>Shea Buttter</p>
+                <p>Arviang</p></a
+              >
+            </li>
+            <li class="item" data-tab="tab-2">
+              <a href="javascript:void(0)">
+                <p>Shea Buttter</p>
+                <p>Arviang</p></a
+              >
+            </li>
+            <li class="item" data-tab="tab-3">
+              <a href="javascript:void(0)">
+                <p>Shea Buttter</p>
+                <p>Arviang</p></a
+              >
+            </li>
+            <li class="item" data-tab="tab-4">
+              <a href="javascript:void(0)">
+                <p>Shea Buttter</p>
+                <p>Arviang</p></a
+              >
+            </li>
+          </ul>
+          <div class="right_img">
+            <div id="tab-1" class="tab-content on">
+              <a href="#"><img src="./arviang.img/sec3_01.jpg" alt="" /></a>
+            </div>
+            <div id="tab-2" class="tab-content">
+              <a href="#"><img src="./arviang.img/sec3_02.jpg" alt="" /></a>
+            </div>
+            <div id="tab-3" class="tab-content">
+              <a href="#"><img src="./arviang.img/sec3_03.jpg" alt="" /></a>
+            </div>
+            <div id="tab-4" class="tab-content">
+              <a href="#"><img src="./arviang.img/sec3_04.jpg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- sec4 start -->
+      <section class="sec4">
+        <h1>New Product</h1>
+        <div class="pro_con">
+          <div class="con_01">
+            <ul class="left_img">
+              <li><img src="./arviang.img/sec4_01.jpg" alt="" /></li>
+              <li>
+                <img src="./arviang.img/sec4_2.jpg" alt="" />
+              </li>
+              <li><img src="./arviang.img/20220224174220L.png" alt="" /></li>
+              <li><img src="./arviang.img/sec4_bottom.png" alt="" /></li>
+            </ul>
+            <div class="con_02">
+              <div class="txt_title">
+                <h2>HONEY FOREST</h2>
+                <p>(Marbling Bath Bomb)</p>
+                <p>Honey Forest 130g</p>
+              </div>
+              <div class="txt_title02">
+                <p>피톤치드 + 목련향</p>
+                <p>
+                  봄의 숲속같은 편안한 피톤치드향과 은은한 목련향의
+                  입욕제입니다.
+                </p>
+                <p>주요성분: 홍상 추출물, 편백수</p>
+              </div>
+            </div>
+            <div class="con_03">
+              <h2>This Product Works Well With</h2>
+              <a href="#"><span>Sakura Bath</span></a>
+              <a href="#"><span>Sex Bath</span></a>
+              <img src="./arviang.img/20211007152617L.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="right_img">
+          <a href="#"><img src="./arviang.img/20211027142914L.jpg" alt="" /></a>
+        </div>
+      </section>
+      <!-- sec5 start -->
+      <section class="sec5">
+        <h1>Youtube</h1>
+        <div class="swiper sec5_slide">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <video
+                controls
+                poster="./arviang.img/tistytosty_use.jpg"
+                loop="loop"
+              >
+                <source src="./arviang.img/you01.mp4" type="video/mp4" />
+                <a href="#"></a>
+              </video>
+            </li>
+            <li class="swiper-slide">
+              <video
+                controls
+                poster="./arviang.img/twilightbubblebar_use.jpg"
+                loop="loop"
+              >
+                <source src="./arviang.img/you02.mp4" type="video/mp4" />
+                <a href="#"></a>
+              </video>
+            </li>
+            <li class="swiper-slide">
+              <video controls poster="./arviang.img/you03.jpg" loop="loop">
+                <source src="./arviang.img/you_03.mp4" type="video/mp4" />
+                <a href="#"></a>
+              </video>
+            </li>
+          </ul>
+          <div class="swiper-pagination pg02"></div>
+        </div>
+        <div class="follow">
+          <p>Follow Us</p>
+        </div>
+      </section>
+      <!-- sec6 start -->
+      <section class="sec6">
+        <h1>Review</h1>
+        <div class="swiper sec6_slide">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <div class="left_con">
+                <a href="#"><img src="./arviang.img/r_01.jpg" alt="" /></a>
+                <p class="num">01</p>
+                <p class="member01">Review by<br />@ arviang_official</p>
+              </div>
+              <div class="right_con">
+                <p>Review</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>he****님</p>
+                <div>
+                  <span>스파 입욕제 덕분에 200% 만족한 여행이였어요!</span>
+                  <span>거품도 쫀쫀하고 향기도 너무 좋아요~</span>
+                  <span>여행가시는 분들 완전 추천 합니다.</span>
+                  <span>꼭 챙겨가세요!</span>
+                </div>
+                <a href="#" class="link">Learn More</a>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="left_con">
+                <a href="#"><img src="./arviang.img/r_02.jpg" alt="" /></a>
+                <p class="num">02</p>
+                <p class="member01">Review by<br />@ arviang_official</p>
+              </div>
+              <div class="right_con">
+                <p>Review</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>he****님</p>
+                <div>
+                  <span>스파 입욕제 덕분에 200% 만족한 여행이였어요!</span>
+                  <span>거품도 쫀쫀하고 향기도 너무 좋아요~</span>
+                  <span>여행가시는 분들 완전 추천 합니다.</span>
+                  <span>꼭 챙겨가세요!</span>
+                </div>
+                <a href="#" class="link">Learn More</a>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="left_con">
+                <a href="#"><img src="./arviang.img/r_03.jpg" alt="" /></a>
+                <p class="num">03</p>
+                <p class="member01">Review by<br />@ arviang_official</p>
+              </div>
+              <div class="right_con">
+                <p>Review</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>he****님</p>
+                <div>
+                  <span>스파 입욕제 덕분에 200% 만족한 여행이였어요!</span>
+                  <span>거품도 쫀쫀하고 향기도 너무 좋아요~</span>
+                  <span>여행가시는 분들 완전 추천 합니다.</span>
+                  <span>꼭 챙겨가세요!</span>
+                </div>
+                <a href="#" class="link">Learn More</a>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="left_con">
+                <a href="#"><img src="./arviang.img/r_04.jpg" alt="" /></a>
+                <p class="num">04</p>
+                <p class="member01">Review by<br />@ arviang_official</p>
+              </div>
+              <div class="right_con">
+                <p>Review</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>he****님</p>
+                <div>
+                  <span>스파 입욕제 덕분에 200% 만족한 여행이였어요!</span>
+                  <span>거품도 쫀쫀하고 향기도 너무 좋아요~</span>
+                  <span>여행가시는 분들 완전 추천 합니다.</span>
+                  <span>꼭 챙겨가세요!</span>
+                </div>
+                <a href="#" class="link">Learn More</a>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="left_con">
+                <a href="#"><img src="./arviang.img/r_01.jpg" alt="" /></a>
+                <p class="num">05</p>
+                <p class="member01">Review by<br />@ arviang_official</p>
+              </div>
+              <div class="right_con">
+                <p>Review</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>he****님</p>
+                <div>
+                  <span>스파 입욕제 덕분에 200% 만족한 여행이였어요!</span>
+                  <span>거품도 쫀쫀하고 향기도 너무 좋아요~</span>
+                  <span>여행가시는 분들 완전 추천 합니다.</span>
+                  <span>꼭 챙겨가세요!</span>
+                </div>
+                <a href="#" class="link">Learn More</a>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="left_con">
+                <a href="#"><img src="./arviang.img/r_02.jpg" alt="" /></a>
+                <p class="num">06</p>
+                <p class="member01">Review by<br />@ arviang_official</p>
+              </div>
+              <div class="right_con">
+                <p>Review</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>he****님</p>
+                <div>
+                  <span>스파 입욕제 덕분에 200% 만족한 여행이였어요!</span>
+                  <span>거품도 쫀쫀하고 향기도 너무 좋아요~</span>
+                  <span>여행가시는 분들 완전 추천 합니다.</span>
+                  <span>꼭 챙겨가세요!</span>
+                </div>
+                <a href="#" class="link">Learn More</a>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="left_con">
+                <a href="#"><img src="./arviang.img/r_03.jpg" alt="" /></a>
+                <p class="num">07</p>
+                <p class="member01">Review by<br />@ arviang_official</p>
+              </div>
+              <div class="right_con">
+                <p>Review</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>he****님</p>
+                <div>
+                  <span>스파 입욕제 덕분에 200% 만족한 여행이였어요!</span>
+                  <span>거품도 쫀쫀하고 향기도 너무 좋아요~</span>
+                  <span>여행가시는 분들 완전 추천 합니다.</span>
+                  <span>꼭 챙겨가세요!</span>
+                </div>
+                <a href="#" class="link">Learn More</a>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="left_con">
+                <a href="#"><img src="./arviang.img/r_04.jpg" alt="" /></a>
+                <p class="num">08</p>
+                <p class="member01">Review by<br />@ arviang_official</p>
+              </div>
+              <div class="right_con">
+                <p>Review</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>he****님</p>
+                <div>
+                  <span>스파 입욕제 덕분에 200% 만족한 여행이였어요!</span>
+                  <span>거품도 쫀쫀하고 향기도 너무 좋아요~</span>
+                  <span>여행가시는 분들 완전 추천 합니다.</span>
+                  <span>꼭 챙겨가세요!</span>
+                </div>
+                <a href="#" class="link">Learn More</a>
+              </div>
+            </li>
+          </ul>
+          <div class="swiper-button-next next6"></div>
+          <div class="swiper-button-prev prev6"></div>
+        </div>
+      </section>
+      <!-- footer start -->
+      <footer>
+        <div class="foot_w">
+          <div class="foot_left">
+            <nav>
+              <a href="#">About Arviang</a>
+              <a href="#">Clinent Care</a>
+              <a href="#">Shipping</a>
+              <a href="#">Visit Us</a>
+            </nav>
+            <div class="foot_logo">
+              <img src="./arviang.img/LOGO.png" alt="" />
+            </div>
+            <address class="copy">
+              <p>
+                <span> 법인명(상호) : </span> <strong>퍼니케어랩</strong>
+                <span>대표자 : </span> <strong>신혜경</strong>
+                <span>주소 : </span>
+                <strong>강원도 원주시 늘품로 187-58.</strong>
+                <span> 현대아카데미프라자 201호 </span>
+              </p>
+              <p>
+                <span> 사업자등록번호 : </span> <strong>224-16-31527</strong>
+                <span>통신판매업신고번호 : </span>
+                <strong>제 2013-강원원주-00027호</strong>
+                <span>개인정보관리자 : </span> <strong> 신혜경</strong>
+              </p>
+              <p>
+                <span> 고객센터 :</span> <strong>070-4155-7799</strong>
+                <span> 이메일 :</span> <strong>goarviang@gmail.com </strong>
+              </p>
+              <p>coptright &copy; 2013 아르비앙 쇼핑몰. All rights reserved.</p>
+            </address>
+          </div>
+          <div class="email">
+            <div>
+              <i class="fa-regular fa-envelope"></i>
+              <span>Join our newsletter</span>
+              <p>You may unsubscribe anytime.<a href="#">Contact Us.</a></p>
+              <form action="/search.html" method="get" class="foot_search">
+                <input
+                  class="address_box"
+                  type="text"
+                  placeholder="Enter your email address"
+                />
+              </form>
+              <div class="sign">
+                <p><a href="#">sign up</a></p>
+                <p>
+                  By clicking OK, I agree to the Terms and Conditions and the
+                  Privacy Policy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

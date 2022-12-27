@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/sub.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./sub.js" defer></script>
+  </head>
+  <body>
+    <div class="m_wrap">
+      <div class="cousor"></div>
+      <!-- fixed menu -->
+      <div class="cookie">
+        <strong>Diese Website verwendet Cookies. <a href="#"> More </a></strong>
+      </div>
+      <div class="flot_menu">
+        <a href="#"><i class="fa-solid fa-angles-up"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-solid fa-angles-down"></i></a>
+      </div>
+      <header class="hd">
+        <div class="swiper top_banner03">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="#"></a>
+              <p>
+                Delays in online orders may occur due to increased safety
+                measures and order volume.
+              </p>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"></a>
+              <p>
+                Don’t wait until the last minute! Order by these dates for
+                holiday delivery (more info here).
+              </p>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"></a>
+              <p>Get 10% OFF Only Arviang Members.</p>
+            </li>
+          </ul>
+        </div>
+        <!-- slide영역과 형제관계로 작업해줘야 z-index값이 적용 -->
+        <!-- gnb start -->
+        <nav class="hd_inner">
+          <!--라인 처리를 가상테그로 할 것인지 border로 처리할 것인지에 따라 wrapping이 추가될 수 있음 -->
+          <a href="index.html" class="logo"
+            ><img src="./arviang.img/LOGO.png" alt=""
+          /></a>
+          <form action="/search.html" method="get" class="search_box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              class="search"
+              type="text"
+              placeholder="          Search for products, scents, sample"
+            />
+          </form>
+          <div class="inner_wrap">
+            <ul class="gnb">
+              <li>
+                <a href="#">New & Trending</a>
+                <ul class="sub">
+                  <li><a href="#">sub_menu1</a></li>
+                  <li><a href="#">sub_menu2</a></li>
+                  <li><a href="#">sub_menu3</a></li>
+                  <li><a href="#">sub_menu4</a></li>
+                  <div class="sub_img">
+                    <!-- 이미지 파일 리스트 같은 사이즈 및 네임 중요 
+                    이미지 클래스명을 따로 지정해도 되지만 너무 많은 값이 적용될수있기때문에
+                  li의 a태그 -> gnb명을 기준으로 직계 (하위의 ~~)로 지정해주며 작업한다-->
+                    <a href="#"
+                      ><img src="../arviang.img/hd_test01.jpg" alt=""
+                    /></a>
+                  </div>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Best Sellers</a>
+                <ul class="sub">
+                  <li><a href="#">sub_menu1</a></li>
+                  <li><a href="#">sub_menu2</a></li>
+                  <li><a href="#">sub_menu3</a></li>
+                  <li><a href="#">sub_menu4</a></li>
+                  <div class="sub_img">
+                    <a href="#"
+                      ><img src="../arviang.img/hd_test02.jpg" alt=""
+                    /></a>
+                  </div>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Bath</a>
+                <ul class="sub">
+                  <li><a href="#">sub_menu1</a></li>
+                  <li><a href="#">sub_menu2</a></li>
+                  <li><a href="#">sub_menu3</a></li>
+                  <li><a href="#">sub_menu4</a></li>
+                  <div class="sub_img">
+                    <a href="#"
+                      ><img src="../arviang.img/hd_test03.jpg" alt=""
+                    /></a>
+                  </div>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Discovery</a>
+                <ul class="sub">
+                  <li><a href="#">sub_menu1</a></li>
+                  <li><a href="#">sub_menu2</a></li>
+                  <li><a href="#">sub_menu3</a></li>
+                  <li><a href="#">sub_menu4</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Gift</a>
+                <ul class="sub">
+                  <li><a href="#">sub_menu1</a></li>
+                  <li><a href="#">sub_menu2</a></li>
+                  <li><a href="#">sub_menu3</a></li>
+                  <li><a href="#">sub_menu4</a></li>
+                  <div class="sub_img">
+                    <a href="#"
+                      ><img src="../arviang.img/hd_test04.jpg" alt=""
+                    /></a>
+                  </div>
+                </ul>
+              </li>
+              <li>
+                <a href="#">About us</a>
+                <ul class="sub">
+                  <li><a href="#">sub_menu1</a></li>
+                  <li><a href="#">sub_menu2</a></li>
+                  <li><a href="#">sub_menu3</a></li>
+                  <li><a href="#">sub_menu4</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="right_menu">
+            <div class="icons">
+              <a href="#"><i class="fa-solid fa-circle-question"></i></a>
+              <a href="#"><i class="fa-solid fa-user"></i></a>
+              <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+            <div class="lang">
+              <span>Korean</span>
+              <ul class="dropdown">
+                <!-- 화살표 가상태그는 span 내부로  -->
+                <li><a href="#">English</a></li>
+                <li><a href="#">Chinese</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- @mobile 형제관계로 작업해줘야함 -->
+          <a href="#"><i class="fa-solid fa-bars ham"></i></a>
+        </nav>
+      </header>
+      <section class="sec1">
+        <h1 hidden>sec1 img</h1>
+        <!-- css bg로 작업..? -->
+        <img src="./arviang.img/sec2_main.jpg" alt="" />
+      </section>
+      <section class="sec2">
+        <h1>HAPPY WINTER</h1>
+        <p>Holiday Collection</p>
+        <p>Celebrate the festive season</p>
+      </section>
+      <!-- sec3 start -->
+      <section class="sec3">
+        <h1 hidden>section03</h1>
+        <div class="sec3_con">
+          <div class="loc_menu">
+            <div class="left_top">
+              <span>HOME</span>
+              <span>HOLIDAY COLLECTION</span>
+              <span>HAPPY WINTER</span>
+            </div>
+            <div class="left_img">
+              <img src="./arviang.img/sec1_3.jpg" alt="" />
+            </div>
+          </div>
+          <div class="search_menu">
+            <form action="/search.html" method="get" class="search_box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                class="search"
+                type="text"
+                placeholder="          Search for products, scents, sample"
+              />
+            </form>
+            <div class="right_img">
+              <img src="./arviang.img/event_04.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- sec4 큰이미지는 첫번째 아님 마지막번째에 넣기 -> 선택하기 편함
+        경우에는 보이지 않더라도 전체적으로 p태그는 같이 들어감
+      flex방법으로 큰 이미지 외 나머지 컨텐츠들은 flex-end로 정렬 
+    큰 이미지는 포지션을 줌으로써 아래 하단에 배치 -> 전체적인 여백 줄이기
+  컨텐츠가 클릭됬을때 큰 이미지로 전환됨 셋팅해놓기 -->
+      <!-- 하단 큰 이미지 -->
+      <!-- 이미지 컨텐츠 종류에 많은 것을 담아두려고 하지 말고 
+  핵심 포인트만 (스크롤이 너무 길다) 아님 여백을 줄여줌이 좋음-->
+      <section class="sec4">
+        <div class="sec4_con">
+          <ul class="sec4_list">
+            <li>
+              <a href="#"><img src="./arviang.img/sub_05.png" alt="" /></a>
+              <div class="big_list">
+                <h2>BUBBLE BAR</h2>
+                <p>
+                  수돗물 아래 놓거나 으깨어 물에 마찰시켜 사용하며, <br />
+                  풍성한 거품과 향기가 욕조를 가득 채우는<br />
+                  세정렬 있는 입욕제입니다.
+                </p>
+                <a href="#">Learn More</a>
+              </div>
+            </li>
+            <li>
+              <a href="#"><img src="./arviang.img/sub_01.png" alt="" /></a>
+              <div class="big_list">
+                <h2>BUBBLE BAR</h2>
+                <p>
+                  수돗물 아래 놓거나 으깨어 물에 마찰시켜 사용하며, <br />
+                  풍성한 거품과 향기가 욕조를 가득 채우는<br />
+                  세정렬 있는 입욕제입니다.
+                </p>
+                <a href="#">Learn More</a>
+              </div>
+              <div class="cart">
+                <a href="#">ADD TO CART</a>
+              </div>
+            </li>
+            <li>
+              <a href="#"><img src="./arviang.img/sub_02.png" alt="" /></a>
+              <div class="big_list">
+                <h2>BUBBLE BAR</h2>
+                <p>
+                  수돗물 아래 놓거나 으깨어 물에 마찰시켜 사용하며, <br />
+                  풍성한 거품과 향기가 욕조를 가득 채우는<br />
+                  세정렬 있는 입욕제입니다.
+                </p>
+                <a href="#">Learn More</a>
+              </div>
+              <div class="cart">
+                <a href="#">ADD TO CART</a>
+              </div>
+            </li>
+            <li>
+              <a href="#"><img src="./arviang.img/sub_03.png" alt="" /></a>
+              <div class="big_list">
+                <h2>BUBBLE BAR</h2>
+                <p>
+                  수돗물 아래 놓거나 으깨어 물에 마찰시켜 사용하며, <br />
+                  풍성한 거품과 향기가 욕조를 가득 채우는<br />
+                  세정렬 있는 입욕제입니다.
+                </p>
+                <a href="#">Learn More</a>
+              </div>
+              <div class="cart">
+                <a href="#">ADD TO CART</a>
+              </div>
+            </li>
+            <li>
+              <a href="#"><img src="./arviang.img/sub_04.png" alt="" /></a>
+              <div class="big_list">
+                <h2>BUBBLE BAR</h2>
+                <p>
+                  수돗물 아래 놓거나 으깨어 물에 마찰시켜 사용하며, <br />
+                  풍성한 거품과 향기가 욕조를 가득 채우는<br />
+                  세정렬 있는 입욕제입니다.
+                </p>
+                <a href="#">Learn More</a>
+              </div>
+              <div class="cart">
+                <a href="#">ADD TO CART</a>
+              </div>
+            </li>
+            <li>
+              <a href="#"><img src="./arviang.img/sub_06.png" alt="" /></a>
+              <div class="big_list">
+                <h2>BUBBLE BAR</h2>
+                <p>
+                  수돗물 아래 놓거나 으깨어 물에 마찰시켜 사용하며, <br />
+                  풍성한 거품과 향기가 욕조를 가득 채우는<br />
+                  세정렬 있는 입욕제입니다.
+                </p>
+                <a href="#">Learn More</a>
+              </div>
+              <div class="cart">
+                <a href="#">ADD TO CART</a>
+              </div>
+            </li>
+            <li>
+              <a href="#"><img src="./arviang.img/sub_07.png" alt="" /></a>
+              <div class="big_list">
+                <h2>BUBBLE BAR</h2>
+                <p>
+                  수돗물 아래 놓거나 으깨어 물에 마찰시켜 사용하며, <br />
+                  풍성한 거품과 향기가 욕조를 가득 채우는<br />
+                  세정렬 있는 입욕제입니다.
+                </p>
+                <a href="#">Learn More</a>
+              </div>
+              <div class="cart">
+                <a href="#">ADD TO CART</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="sec5">
+        <h1>This Product Works Well With</h1>
+        <div class="swiper sec5_slide">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="#"
+                ><img src="./arviang.img/20220304151153L.png" alt=""
+              /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"
+                ><img src="./arviang.img/20221012165341L.png" alt=""
+              /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"
+                ><img src="./arviang.img/20221012153835L.png" alt=""
+              /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"
+                ><img src="./arviang.img/20220304202841L.png" alt=""
+              /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"
+                ><img src="./arviang.img/20220304151153L.png" alt=""
+              /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"><img src="./arviang.img/A.jpg" alt="" /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"
+                ><img src="./arviang.img/20221012153835L.png" alt=""
+              /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"
+                ><img src="./arviang.img/20220304202841L.png" alt=""
+              /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"
+                ><img src="./arviang.img/20220304151153L.png" alt=""
+              /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"><img src="./arviang.img/A.jpg" alt="" /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"
+                ><img src="./arviang.img/20221012153835L.png" alt=""
+              /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"
+                ><img src="./arviang.img/20220304202841L.png" alt=""
+              /></a>
+            </li>
+          </ul>
+          <div class="swiper-button-next next1"></div>
+          <div class="swiper-button-prev prev1"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </section>
+      <!-- footer start -->
+      <footer>
+        <div class="foot_w">
+          <div class="foot_left">
+            <nav>
+              <a href="#">About Arviang</a>
+              <a href="#">Clinent Care</a>
+              <a href="#">Shipping</a>
+              <a href="#">Visit Us</a>
+            </nav>
+            <div class="foot_logo">
+              <img src="./arviang.img/LOGO.png" alt="" />
+            </div>
+            <address class="copy">
+              <p>
+                <span> 법인명(상호) : </span> <strong>퍼니케어랩</strong>
+                <span>대표자 : </span> <strong>신혜경</strong>
+                <span>주소 : </span>
+                <strong>강원도 원주시 늘품로 187-58.</strong>
+                <span> 현대아카데미프라자 201호 </span>
+              </p>
+              <p>
+                <span> 사업자등록번호 : </span> <strong>224-16-31527</strong>
+                <span>통신판매업신고번호 : </span>
+                <strong>제 2013-강원원주-00027호</strong>
+                <span>개인정보관리자 : </span> <strong> 신혜경</strong>
+              </p>
+              <p>
+                <span> 고객센터 :</span> <strong>070-4155-7799</strong>
+                <span> 이메일 :</span> <strong>goarviang@gmail.com </strong>
+              </p>
+              <p>coptright &copy; 2013 아르비앙 쇼핑몰. All rights reserved.</p>
+            </address>
+          </div>
+          <div class="email">
+            <div>
+              <i class="fa-regular fa-envelope"></i>
+              <span>Join our newsletter</span>
+              <p>You may unsubscribe anytime.<a href="#">Contact Us.</a></p>
+              <form action="/search.html" method="get" class="foot_search">
+                <input
+                  class="address_box"
+                  type="text"
+                  placeholder="Enter your email address"
+                />
+              </form>
+              <div class="sign">
+                <p><a href="#">sign up</a></p>
+                <p>
+                  By clicking OK, I agree to the Terms and Conditions and the
+                  Privacy Policy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
